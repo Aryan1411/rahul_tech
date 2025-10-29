@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rahul • Professional Driving Instructor (5+ Years Experience)</title>
+  <meta name="description" content="Learn to drive with confidence. Rahul is a professional driving instructor with 5+ years of experience, offering beginner lessons, refresher courses, and test preparation." />
+  <meta name="theme-color" content="#0f766e" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%230f766e'/%3E%3Cpath d='M25 65h50M35 50h30M30 35h40' stroke='%23fff' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <style>
+    :root{
+      --bg:#0b1213;
+      --card:#0e1819;
+      --muted:#94a3b8;
+      --text:#ebf5f5;
+      --brand:#0f766e;
+      --brand-2:#14b8a6;
+      --accent:#f59e0b;
+      --ok:#22c55e;
+      --warn:#ef4444;
+      --ring:rgba(20,184,166,.35);
+      --shadow:0 10px 30px rgba(0,0,0,.25),0 1px 0 rgba(255,255,255,.03) inset;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color:var(--text);
+      background:radial-gradient(1200px 600px at 10% -10%, rgba(20,184,166,.15), transparent 40%), radial-gradient(900px 600px at 110% 10%, rgba(245,158,11,.12), transparent 35%), linear-gradient(180deg, #071012, #0b1213 30%);
+      line-height:1.6;
+    }
+    a{color:var(--brand-2);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    header{
+      position:sticky;top:0;z-index:40;
+      backdrop-filter:saturate(160%) blur(6px);
+      background:linear-gradient(180deg, rgba(11,18,19,.85), rgba(11,18,19,.6));
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;gap:16px;
+      height:64px;
+    }
+    .brand{
+      display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px
+    }
+    .brand svg{flex:0 0 auto}
+    .brand span{font-size:1.05rem}
+    .nav-links{
+      display:flex;gap:18px;align-items:center
+    }
+    .nav-links a{
+      color:var(--text);opacity:.85;font-weight:600;font-size:.95rem
+    }
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:.7rem 1rem;border-radius:12px;border:1px solid rgba(255,255,255,.08);
+      background:linear-gradient(180deg, rgba(20,184,166,.2), rgba(20,184,166,.05));
+      color:#eafffb;font-weight:700;box-shadow:var(--shadow);
+      transition:.2s transform ease,.2s filter ease;
+    }
+    .btn:hover{transform:translateY(-1px);filter:saturate(110%)}
+    .btn.primary{
+      background:linear-gradient(180deg, #14b8a6, #0f766e);
+      border-color:rgba(0,0,0,.25)
+    }
+    .btn.ghost{
+      background:transparent;border-color:rgba(255,255,255,.12)
+    }
+    .menu-toggle{display:none;background:transparent;border:0;color:var(--text)}
+    @media (max-width: 860px){
+      .nav-links{display:none}
+      .menu-toggle{display:inline-flex}
+      .mobile-menu{
+        display:none;position:absolute;left:0;right:0;top:64px;padding:10px 20px;
+        background:rgba(11,18,19,.95);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.06)
+      }
+      .mobile-menu.open{display:block}
+      .mobile-menu a{display:block;padding:10px 0;color:var(--text);font-weight:600}
+    }
+    .hero{
+      padding:64px 0 24px;
+    }
+    .hero .wrap{
+      display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:center
+    }
+    @media (max-width: 900px){
+      .hero .wrap{grid-template-columns:1fr}
+    }
+    .eyebrow{
+      display:inline-flex;gap:8px;align-items:center;
+      border:1px solid rgba(255,255,255,.12);padding:6px 10px;border-radius:999px;
+      font-size:.85rem;letter-spacing:.3px;color:#eafffb;background:rgba(15,118,110,.15)
+    }
+    .eyebrow svg{color:var(--accent)}
+    h1{
+      font-size:clamp(2rem, 4.5vw, 3.2rem);line-height:1.1;margin:12px 0 10px;
+      letter-spacing:.2px
+    }
+    .lead{color:var(--muted);font-size:1.05rem}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .stats{
+      margin-top:28px;display:flex;gap:16px;flex-wrap:wrap
+    }
+    .stat{
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.08);
+      padding:14px 16px;border-radius:14px;min-width:150px;flex:1;box-shadow:var(--shadow)
+    }
+    .stat strong{display:block;font-size:1.4rem}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:16px;padding:18px;box-shadow:var(--shadow)
+    }
+    section{padding:40px 0}
+    h2{font-size:1.8rem;margin:0 0 14px}
+    .grid{
+      display:grid;gap:16px;grid-template-columns:repeat(3, 1fr)
+    }
+    @media (max-width: 900px){.grid{grid-template-columns:1fr}}
+    .service .title{font-weight:800;margin-bottom:6px}
+    .service p{color:var(--muted);margin:0}
+    .check{color:var(--ok);margin-right:8px}
+    .about{
+      display:grid;grid-template-columns:1.2fr .8fr;gap:20px
+    }
+    @media (max-width: 900px){.about{grid-template-columns:1fr}}
+    .badge-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .badge{
+      font-size:.85rem;border:1px solid rgba(255,255,255,.12);
+      padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.03)
+    }
+    .pricing .plan{
+      display:flex;flex-direction:column;gap:8px
+    }
+    .price{font-size:1.6rem;font-weight:900}
+    .small{font-size:.9rem;color:var(--muted)}
+    .testimonial{
+      display:flex;gap:12px;align-items:flex-start
+    }
+    .avatar{
+      width:46px;height:46px;border-radius:50%;
+      background:linear-gradient(135deg, #14b8a6, #0f766e);display:grid;place-items:center;
+      font-weight:800
+    }
+    .faq details{
+      border:1px solid rgba(255,255,255,.09);border-radius:14px;padding:12px 16px;background:rgba(255,255,255,.03)
+    }
+    .faq details[open]{background:rgba(20,184,166,.06);border-color:rgba(20,184,166,.25)}
+    .faq summary{cursor:pointer;font-weight:700}
+    .contact .form{
+      display:grid;grid-template-columns:1fr 1fr;gap:12px
+    }
+    .form .full{grid-column:1 / -1}
+    @media (max-width: 760px){.contact .form{grid-template-columns:1fr}}
+    label{display:block;font-weight:700;margin:6px 0 6px}
+    input,select,textarea{
+      width:100%;padding:12px 12px;border-radius:12px;color:var(--text);
+      background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);
+      outline:none
+    }
+    input:focus,select:focus,textarea:focus{border-color:var(--brand-2);box-shadow:0 0 0 6px var(--ring)}
+    textarea{min-height:120px;resize:vertical}
+    .notice{font-size:.9rem;color:var(--muted)}
+    footer{
+      padding:30px 0 60px;border-top:1px solid rgba(255,255,255,.06);
+      background:linear-gradient(0deg, rgba(0,0,0,.15), transparent)
+    }
+    .footer-grid{
+      display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:16px
+    }
+    @media (max-width: 900px){.footer-grid{grid-template-columns:1fr}}
+    .social a{margin-right:10px}
+    .chip{
+      display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.12);
+      padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.03);font-weight:700
+    }
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="Homepage">
+        <svg width="30" height="30" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <rect x="3" y="10" width="42" height="26" rx="6" stroke="#a7f3d0" stroke-width="2"/>
+          <circle cx="13" cy="36" r="4" fill="#14b8a6"/><circle cx="35" cy="36" r="4" fill="#14b8a6"/>
+          <path d="M10 22h14M10 27h10M27 27h11" stroke="#eafffb" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>Rahul • Driving Instructor</span>
+      </a>
+      <nav class="nav-links" aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <a class="btn" href="#contact">Book Lesson</a>
+      </nav>
+      <button class="menu-toggle btn ghost" aria-label="Open navigation" aria-controls="mobileMenu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="mobile-menu container" role="navigation" aria-label="Mobile">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" class="btn" style="margin-top:8px">Book Lesson</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container wrap">
+        <div>
+          <span class="eyebrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/></svg>
+            5+ years of patient, professional instruction
+          </span>
+          <h1>Learn to drive with confidence and calm</h1>
+          <p class="lead">Rahul is a friendly, certified driving instructor dedicated to safe, structured, and stress‑free lessons tailored to your goals—whether you’re a first‑time driver or brushing up before your test.</p>
+          <div class="cta-row">
+            <a class="btn primary" href="#contact">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Book your first lesson
+            </a>
+            <a class="btn ghost" href="#pricing">View pricing</a>
+          </div>
+          <div class="stats" aria-label="Highlights">
+            <div class="stat">
+              <strong>5+ years</strong>
+              Proven experience teaching safe driving habits.
+            </div>
+            <div class="stat">
+              <strong>Beginner friendly</strong>
+              Calm guidance for nervous drivers.
+            </div>
+            <div class="stat">
+              <strong>Test-ready prep</strong>
+              Targeted routes and mock assessments.
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <h3 style="margin-top:0">What you’ll learn</h3>
+            <ul style="margin:10px 0 0;padding-left:18px">
+              <li><span class="check">✔</span>Vehicle controls, smooth starts and stops</li>
+              <li><span class="check">✔</span>Parking, reversing, and 3-point turns</li>
+              <li><span class="check">✔</span>Lane discipline, signals, and mirrors</li>
+              <li><span class="check">✔</span>Night, rain, and highway confidence</li>
+              <li><span class="check">✔</span>Test routes and examiner expectations</li>
+            </ul>
+            <p class="small" style="margin-top:10px">Dual‑control, well‑maintained training car. Manual and automatic available.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about">
+        <div class="card">
+          <h2>Meet Rahul</h2>
+          <p>Hi, I’m Rahul. Over the past 5+ years, I’ve helped learners of all ages become safe, confident drivers. My lessons are structured but relaxed, with clear milestones so you always know what’s next.</p>
+          <div class="badge-row" aria-label="Credentials">
+            <span class="badge">Licensed Driving Instructor</span>
+            <span class="badge">Defensive Driving Focus</span>
+            <span class="badge">Manual & Automatic</span>
+            <span class="badge">First‑Aid Trained</span>
+          </div>
+          <p class="small" style="margin-top:10px">Serving your local area. Pick‑up from home, school, or work by arrangement.</p>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Why learn with Rahul?</h3>
+          <ul style="margin:0;padding-left:18px">
+            <li><span class="check">✔</span>Patient coaching tailored to your pace</li>
+            <li><span class="check">✔</span>Structured lesson plans and progress tracking</li>
+            <li><span class="check">✔</span>Flexible scheduling, evenings and weekends</li>
+            <li><span class="check">✔</span>Transparent pricing and package discounts</li>
+          </ul>
+          <div style="margin-top:14px">
+            <span class="chip">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm-1 15-5-5 1.41-1.41L11 14.17l5.59-5.59L18 10Z"/></svg>
+              Safety‑first mindset
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <h2>Lesson services</h2>
+        <div class="grid">
+          <div class="card service">
+            <div class="title">Beginner Lessons</div>
+            <p>Start from the basics—controls, moving off, and smooth braking in quiet areas.</p>
+          </div>
+          <div class="card service">
+            <div class="title">Refresher Courses</div>
+            <p>For lapsed drivers or those switching cars. Build confidence quickly.</p>
+          </div>
+          <div class="card service">
+            <div class="title">Test Preparation</div>
+            <p>Mock tests, local test routes, and examiner expectations to boost first‑time success.</p>
+          </div>
+          <div class="card service">
+            <div class="title">Nervous Drivers</div>
+            <p>Calm, supportive coaching with step‑by‑step progress and positive feedback.</p>
+          </div>
+          <div class="card service">
+            <div class="title">Night & Highway</div>
+            <p>Advanced sessions covering lane discipline, merging, and hazard anticipation.</p>
+          </div>
+          <div class="card service">
+            <div class="title">Conversion & Rules</div>
+            <p>International license conversion help and local road rules orientation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+      <div class="container">
+        <h2>Simple, transparent pricing</h2>
+        <div class="grid">
+          <div class="card plan">
+            <h3 style="margin:0">Single Lesson</h3>
+            <div class="price">from 1 hr</div>
+            <p class="small">Ideal for quick refreshers or focused practice before a test.</p>
+            <a class="btn" href="#contact">Enquire</a>
+          </div>
+          <div class="card plan">
+            <h3 style="margin:0">5‑Lesson Pack</h3>
+            <div class="price">best for progress</div>
+            <p class="small">Structured plan with measurable milestones and feedback each week.</p>
+            <a class="btn" href="#contact">Reserve</a>
+          </div>
+          <div class="card plan">
+            <h3 style="margin:0">10‑Lesson Pack</h3>
+            <div class="price">most popular</div>
+            <p class="small">Comprehensive preparation from fundamentals to test‑ready.</p>
+            <a class="btn" href="#contact">Get started</a>
+          </div>
+        </div>
+        <p class="small" style="margin-top:10px">Note: Pricing may vary by lesson length, transmission type, and pickup area. Ask for current rates and availability.</p>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <div class="container">
+        <h2>Learner feedback</h2>
+        <div class="grid">
+          <div class="card testimonial">
+            <div class="avatar" aria-hidden="true">A</div>
+            <div>
+              <strong>Ananya</strong>
+              <p class="small">I was really nervous to start, but Rahul broke everything down into simple steps. Passed my test and actually enjoy driving now!</p>
+            </div>
+          </div>
+          <div class="card testimonial">
+            <div class="avatar" aria-hidden="true">M</div>
+            <div>
+              <strong>Mohit</strong>
+              <p class="small">Clear coaching and lots of tips for the test routes. The mock tests made a huge difference.</p>
+            </div>
+          </div>
+          <div class="card testimonial">
+            <div class="avatar" aria-hidden="true">S</div>
+            <div>
+              <strong>Sara</strong>
+              <p class="small">Flexible scheduling and super patient. I learned parking without stress—highly recommend!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq">
+      <div class="container">
+        <h2>Frequently asked questions</h2>
+        <div class="grid">
+          <details class="card" open>
+            <summary>How long are lessons?</summary>
+            <p class="small">Most sessions are 60–90 minutes. Longer sessions available on request.</p>
+          </details>
+          <details class="card">
+            <summary>Manual or automatic?</summary>
+            <p class="small">Both options are available. Choose based on your future driving needs.</p>
+          </details>
+          <details class="card">
+            <summary>Do you offer mock tests?</summary>
+            <p class="small">Yes, including feedback and targeted practice on common trouble spots.</p>
+          </details>
+          <details class="card">
+            <summary>Pickup options?</summary>
+            <p class="small">Home, school, or workplace pickup can be arranged within the local area.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Book a lesson</h2>
+        <div class="grid">
+          <div class="card">
+            <form id="contactForm" class="form" aria-label="Contact form">
+              <div>
+                <label for="name">Full name</label>
+                <input id="name" name="name" type="text" required placeholder="Your name" />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required placeholder="you@example.com" />
+              </div>
+              <div>
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" required placeholder="+91 98765 43210" />
+              </div>
+              <div>
+                <label for="service">Service</label>
+                <select id="service" name="service" required>
+                  <option value="">Choose a service</option>
+                  <option>Beginner Lesson</option>
+                  <option>Refresher Course</option>
+                  <option>Test Preparation</option>
+                  <option>Nervous Drivers</option>
+                  <option>Night & Highway</option>
+                </select>
+              </div>
+              <div class="full">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell me your goals, availability, and location."></textarea>
+              </div>
+              <div class="full">
+                <button class="btn primary" type="submit">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12l18-9-7 18-2-7-9-2z" stroke="white" stroke-width="2" stroke-linejoin="round"/></svg>
+                  Send enquiry
+                </button>
+                <p id="formStatus" class="notice" role="status" aria-live="polite"></p>
+              </div>
+            </form>
+            <p class="small">Prefer WhatsApp or email? Use the links below and include your area and preferred times.</p>
+          </div>
+          <div class="card">
+            <h3 style="margin-top:0">Contact details</h3>
+            <p class="small">Rahul • Professional Driving Instructor</p>
+            <p class="small" style="margin:8px 0">
+              <strong>Phone:</strong> <a id="phoneLink" href="tel:+919876543210">+91 98765 43210</a><br/>
+              <strong>Email:</strong> <a id="emailLink" href="mailto:rahul.driving@example.com">rahul.driving@example.com</a>
+            </p>
+            <div class="social" aria-label="Social links">
+              <a class="btn ghost" href="https://wa.me/919876543210?text=Hi%20Rahul%2C%20I%27d%20like%20to%20book%20a%20driving%20lesson." target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn ghost" href="mailto:rahul.driving@example.com?subject=Driving%20Lesson%20Enquiry&body=Hi%20Rahul%2C%0A%0AI%27d%20like%20to%20book%20a%20lesson.%20My%20details%3A%0AName%3A%0APhone%3A%0AService%3A%0AAvailability%3A%0ALocation%3A%0A" target="_blank" rel="noopener">Email</a>
+            </div>
+            <p class="small" style="margin-top:10px"><strong>Hours:</strong> Mon–Sun, 7am–9pm (by appointment)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand">
+          <svg width="28" height="28" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <rect x="3" y="10" width="42" height="26" rx="6" stroke="#a7f3d0" stroke-width="2"/>
+            <circle cx="13" cy="36" r="4" fill="#14b8a6"/><circle cx="35" cy="36" r="4" fill="#14b8a6"/>
+          </svg>
+          <strong>Rahul • Driving Instructor</strong>
+        </div>
+        <p class="small">Safe, structured, and supportive driving lessons for beginners and refreshers.</p>
+        <p class="small">© <span id="year"></span> Rahul. All rights reserved.</p>
+      </div>
+      <div>
+        <h4 style="margin:6px 0">Quick links</h4>
+        <p class="small">
+          <a href="#about">About</a> · <a href="#services">Services</a> · <a href="#pricing">Pricing</a> · <a href="#faq">FAQ</a> · <a href="#contact">Contact</a>
+        </p>
+      </div>
+      <div>
+        <h4 style="margin:6px 0">Policies</h4>
+        <p class="small"><a href="#" onclick="alert('No personal data is stored by this static site. Messages are sent via your email/WhatsApp client.');return false;">Privacy</a> · <a href="#" onclick="alert('24-hour reschedule policy. Contact Rahul for details.');return false;">Rescheduling</a></p>
+        <p class="small">This website is open-source under the MIT License.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation toggle
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    toggleBtn?.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      toggleBtn.setAttribute('aria-expanded', mobileMenu.classList.contains('open') ? 'true' : 'false');
+    });
+    // Close mobile menu on link click
+    mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', ()=> mobileMenu.classList.remove('open')))
+
+    // Smooth scroll for in-page anchors
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', e => {
+        const id = link.getAttribute('href').slice(1);
+        if (!id) return;
+        const el = document.getElementById(id);
+        if (el){
+          e.preventDefault();
+          el.scrollIntoView({behavior:'smooth',block:'start'});
+        }
+      });
+    });
+
+    // Contact form handling (no backend): validate then open mailto + show status
+    const form = document.getElementById('contactForm');
+    const statusEl = document.getElementById('formStatus');
+    form?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      if (!data.name || !data.email || !data.phone || !data.service){
+        statusEl.textContent = 'Please fill out name, email, phone, and service.';
+        statusEl.style.color = '#fca5a5';
+        return;
+      }
+      const subj = encodeURIComponent('Driving Lesson Enquiry');
+      const body = encodeURIComponent(
+        `Hi Rahul,
+
+I'd like to book a driving lesson.
+
+Name: ${data.name}
+Email: ${data.email}
+Phone: ${data.phone}
+Service: ${data.service}
+Message: ${data.message || '-'}
+
+Thank you!`
+      );
+      const email = document.getElementById('emailLink')?.getAttribute('href')?.replace('mailto:','') || 'rahul.driving@example.com';
+      const mailto = `mailto:${email}?subject=${subj}&body=${body}`;
+      // Show success message
+      statusEl.textContent = 'Thank you! Your email client will open. If it does not, please email rahul.driving@example.com.';
+      statusEl.style.color = '#a7f3d0';
+      // Try open mail client
+      window.location.href = mailto;
+      form.reset();
+    });
+
+    // Current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Improve tap targets on iOS
+    document.addEventListener('touchstart', function(){}, {passive:true});
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rahul",
+    "jobTitle": "Driving Instructor",
+    "description": "Professional driving instructor offering beginner, refresher, and test-prep lessons with a safety-first approach.",
+    "url": "",
+    "areaServed": "Local area",
+    "telephone": "+91 98765 43210",
+    "email": "rahul.driving@example.com",
+    "sameAs": [],
+    "worksFor": {
+      "@type": "LocalBusiness",
+      "name": "Rahul Driving Instructor",
+      "areaServed": "Local area",
+      "priceRange": "$"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long are lessons?",
+        "acceptedAnswer": {"@type":"Answer","text":"Most sessions are 60–90 minutes. Longer sessions available on request."}
+      },
+      {
+        "@type": "Question",
+        "name": "Manual or automatic?",
+        "acceptedAnswer": {"@type":"Answer","text":"Both options are available. Choose based on your future driving needs."}
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer mock tests?",
+        "acceptedAnswer": {"@type":"Answer","text":"Yes, including feedback and targeted practice on common trouble spots."}
+      },
+      {
+        "@type": "Question",
+        "name": "Pickup options?",
+        "acceptedAnswer": {"@type":"Answer","text":"Home, school, or workplace pickup can be arranged within the local area."}
+      }
+    ]
+  }
+  </script>
+
+  <!-- MIT License (also included in README) -->
+  <!--
+  MIT License
+
+  Copyright (c) 2025 Rahul
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+  -->
+</body>
+</html>
